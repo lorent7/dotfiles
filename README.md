@@ -10,43 +10,12 @@ Inspired by [Lissy93](https://github.com/Lissy93/dotfiles)
 
 Will get auto install script in future.
 
-To use aliases:
-
-```sh
-# inside .config/.shell/<.bashrc / .zshrc>
-source $XDG_CONFIG_HOME/.shared/aliases.sh
-```
-
-```sh
-#
-# ~/.bash_profile
-#
-declare file=~/.config/bash/.bashrc
-[[ -f $file ]] && . $file
-```
-
-If you dont have a basic rc file for your shell in home it breaks in subshells
-
-Files needed inside $HOME:
-
-```sh
-# ~/.bashrc
-[[ -f ~/.config/bash/.bashrc ]] && . ~/.config/bash/.bashrc
-
-# or for zsh
-# ~/.zshenv
-export ZDOTDIR="$HOME/.config/zsh"
-export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$HOST-$ZSH_VERSION"
-```
-
 # Notes
 
 Adjust aliases and exports for these.
 
 When installed from the extra repository, helix uses `helix` instead of `hx`.  
 Bat binary can be bat or batcat on some systems.
-
-# notes or so?
 
 ## Helix LSPs
 
