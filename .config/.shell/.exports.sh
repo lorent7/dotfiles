@@ -11,6 +11,9 @@ export XDG_BIN_HOME="$HOME/.local/bin"
 export XDG_LIB_HOME="$HOME/.local/lib"
 export XDG_CACHE_HOME="$HOME/.cache"
 
+# for PATH
+export PATH=$PATH:$XDG_BIN_HOME
+
 # python
 export PYTHONSTARTUP="$XDG_CONFIG_HOME/python/pythonrc"
 export PYTHON_HISTORY="$XDG_STATE_HOME/python_history"
@@ -24,7 +27,6 @@ export WGETRC="$XDG_CONFIG_HOME/wgetrc"
 # https://docs.npmjs.com/cli/v11/using-npm/config
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
 export npm_config_cache="$XDG_CACHE_HOME/npm"
-
 
 # self explanatory but if its bash, give it bash history file location
 if [ -n "$BASH_VERSION" ]; then
