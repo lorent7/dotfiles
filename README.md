@@ -8,7 +8,7 @@ Inspired by [Lissy93](https://github.com/Lissy93/dotfiles)
 
 # Usage
 
-Clone this repo wherever you have `$XDG_CONFIG_HOME` set i guess.
+Will get auto install script in future.
 
 To use aliases:
 
@@ -25,8 +25,7 @@ declare file=~/.config/bash/.bashrc
 [[ -f $file ]] && . $file
 ```
 
-> [!important]
-> If you dont have a basic rc file for your shell in home it breaks in subshells
+If you dont have a basic rc file for your shell in home it breaks in subshells
 
 Files needed inside $HOME:
 
@@ -44,7 +43,7 @@ export ZCOMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-$HOST-$ZSH_VERSION"
 
 Adjust aliases and exports for these.
 
-When installed from the extra repository, helix uses `helix` instead of `hx`.
+When installed from the extra repository, helix uses `helix` instead of `hx`.  
 Bat binary can be bat or batcat on some systems.
 
 # notes or so?
