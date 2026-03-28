@@ -5,6 +5,11 @@ alias cputemp='watch -n 1 sensors'
 
 # dotfiles alias
 alias dotfiles='$(which git) --git-dir=$HOME/dotfiles/ --work-tree=$HOME'
+alias dfs='dotfiles status'
+alias dfa='dotfiles add'
+alias dfP='dotfiles push'
+alias dfp='dotfiles pull'
+
 # alias to use lazygit with dotfiles
 alias lgdf='lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
