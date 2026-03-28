@@ -64,8 +64,8 @@ npm install -g dockerfile-language-server-nodejs
 # docker compose
 npm install -g @microsoft/compose-language-service
 
-# markdown editor (needs yay)
-pacman -S marksman-bin
+# markdown LSP
+pacman -S marksman
 
 # toml
 npm install -g tombi
