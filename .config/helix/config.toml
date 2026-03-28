@@ -16,8 +16,19 @@ hidden = false
 
 [keys.insert]
 # move lines with alt up/down
-A-down = ["extend_to_line_bounds", "delete_selection", "paste_after", "move_line_down"]
-A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"]
+A-down = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "paste_after",
+  "move_line_down"
+]
+A-up = [
+  "extend_to_line_bounds",
+  "delete_selection",
+  "move_line_up",
+  "paste_before",
+  "move_line_up"
+]
 
 "C-left" = "move_prev_long_word_start"
 "C-right" = "move_next_long_word_start"
@@ -34,6 +45,9 @@ C-home = "goto_file_start"
 # switch between buffers
 tab = "goto_next_buffer"
 S-tab = "goto_previous_buffer"
+
+# format file
+"S-A-f" = "@:format<ret>"
 
 C-d = '@X"dy"dp'
 
