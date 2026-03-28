@@ -1,7 +1,5 @@
 # Dotfiles
 
-## Description
-
 Contains my configs primarily for arch.  
 Will get extended over time.  
 I'm trying to make this smart but we'll see.
