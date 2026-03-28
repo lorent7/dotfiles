@@ -1,0 +1,23 @@
+theme = "dark_plus"
+
+[editor]
+line-number = "relative"
+true-color = true
+idle-timeout = 0 # delay until autocomplete comes i think
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.insert]
+# move lines with alt up/down
+A-down = ["extend_to_line_bounds", "delete_selection", "paste_after", "move_line_down"]
+A-up = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before", "move_line_up"]
+
+"C-left" = "move_prev_long_word_start"
+"C-right" = "move_next_long_word_start"
+
