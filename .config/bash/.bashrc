@@ -5,11 +5,8 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-# import env vars
-source ~/.config/.shell/.exports.sh
-
-# import aliases
-source "$XDG_CONFIG_HOME/.shell/.aliases.sh"
+# source the file that contains all sources
+source "$XDG_CONFIG_HOME/.shell/.sources.sh"
 
 # to find available color numbers,
 # ~/apps/shell/display colors script
@@ -28,4 +25,3 @@ RESET="\[$(tput sgr0)\]"
 
 # without error code
 PS1="[${PURPLE}\u@\h \W${RESET}] \$ "
-

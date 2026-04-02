@@ -1,0 +1,9 @@
+# fixes OOM for bash lsp 5.6
+external-sources=false
+
+# Disabling external-sources makes shellcheck not follow source commands (i think)
+# so instead we just remove the hint
+# E.g. "source .bashrc" would give hint that its not checking if that file actually exists
+# https://www.shellcheck.net/wiki/SC1091
+
+disable=SC1091

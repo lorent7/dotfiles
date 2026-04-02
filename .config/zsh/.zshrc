@@ -1,10 +1,14 @@
-# import env vars
-source ~/.config/.shell/.exports.sh
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+	source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
 
-# import aliases
-source $XDG_CONFIG_HOME/.shell/.aliases.sh
+# source master source
+source ~/.config/.shell/.sources.sh
 
-ZSH_THEME="lambda" # set by `omz`
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Case-sensitive completion must be off. _ and - will be interchangeable.
 HYPHEN_INSENSITIVE="true"
@@ -24,7 +28,8 @@ HIST_STAMPS="dd.mm.yyyy"
 
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-plugins=(git
+plugins=(
+	git
 	archlinux
 	themes
 	zsh-autosuggestions
@@ -43,3 +48,5 @@ source $ZSH/oh-my-zsh.sh
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
 
+# To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+[[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
