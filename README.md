@@ -6,11 +6,20 @@ I'm trying to make this smart but we'll see.
 
 Inspired by [Lissy93](https://github.com/Lissy93/dotfiles)
 
-# Usage
+## Usage
 
 Will get auto install script in future.
 
-# Notes
+## Dependencies
+
+### ZSH
+
+Install this in your terminal:
+
+Any Nerd font should work but this ones nice \
+[CaskaydiaMono Nerd Font](https://www.nerdfonts.com/font-downloads)
+
+## Notes
 
 Adjust aliases and exports for these.
 
