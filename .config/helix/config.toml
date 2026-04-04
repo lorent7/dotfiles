@@ -1,11 +1,15 @@
-theme = "dark_plus"
-# theme = "rose_pine_moon" # try this somewhen
+# theme = "dark_plus"
+theme = "rose_pine"
 
 [editor]
 line-number = "relative"
+cursorline = true
 true-color = true
+color-modes = true
+scrolloff = 8
 idle-timeout = 0
 bufferline = "multiple"
+popup-border = "all"
 
 [editor.cursor-shape]
 normal = "block"
@@ -14,6 +18,18 @@ select = "underline"
 
 [editor.file-picker]
 hidden = false
+
+[editor.lsp]
+display-inlay-hints = true
+
+[editor.indent-guides]
+render = true
+
+[editor.inline-diagnostics]
+cursor-line = "warning"  # show warnings and errors on the cursorline inline
+
+[editor.smart-tab]
+supersede-menu = true
 
 [keys.insert]
 # move lines with alt up/down
@@ -55,3 +71,36 @@ C-d = '@X"dy"dp'
 # movement
 C-end = "goto_file_end"
 C-home = "goto_file_start"
+
+[keys.normal.backspace]
+w = ":write-all"
+r = [":reload-all", ":config-reload"]
+
+# lf
+f = [
+  ":write-all",
+  ":insert-output lf >/dev/tty",
+  ":redraw",
+  ":set mouse false",
+  ":set mouse true",
+  ":reload-all"
+]
+
+# ------ Git ------------
+[keys.normal.backspace.g]
+
+# open Lazygit
+o = [
+  ":write-all",
+  ":insert-output lazygit >/dev/tty",
+  ":redraw",
+  ":set mouse false",
+  ":set mouse true",
+  ":reload-all"
+]
+
+# inline blame
+b = ":run-shell-command ~/.config/helix/utils/blame_line_pretty.sh %{buffer_name} %{cursor_line}"
+
+# # full last commit in the line changes for the file
+B = ":open %sh{~/.config/helix/utils/blame_file_pretty.sh %{buffer_name} %{cursor_line}}"
