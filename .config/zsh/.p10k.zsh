@@ -102,6 +102,7 @@
     per_directory_history   # Oh My Zsh per-directory-history local/global indicator
     # cpu_arch              # CPU architecture
     # time                  # current time
+    show_shlvl              # show current shell level
     # =========================[ Line #2 ]=========================
     newline
     # ip                    # ip address and bandwidth usage for a specified network interface
@@ -1700,8 +1701,11 @@
     p10k segment -b 235 -f 5 -i '⭐' -t 'hello, %n'
   }
 
-  function prompt_newtest() {
-    p10k segment -b 4 -f 9 -t "hi hello"
+  function prompt_show_shlvl() {
+    if (( $SHLVL <= 1 )); then
+      return
+    fi
+    p10k segment -b 147 -f 0 -t "$SHLVL  "
   }
 
   # User-defined prompt segments may optionally provide an instant_prompt_* function. Its job
