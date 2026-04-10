@@ -5,11 +5,45 @@ theme = "rose_pine"
 line-number = "relative"
 cursorline = true
 true-color = true
+auto-format = true
 color-modes = true
 scrolloff = 8
 idle-timeout = 0
 bufferline = "multiple"
 popup-border = "all"
+
+[editor.gutters]
+layout = [
+  "spacer",
+  "diff",
+  "spacer",
+  "diagnostics",
+  "line-numbers",
+  "spacer",
+  "spacer",
+]
+
+[editor.statusline]
+left = [
+  "mode",
+  "spinner",
+  "total-line-numbers",
+  "position",
+  "primary-selection-length",
+  "register",
+  "read-only-indicator",
+  "file-modification-indicator"
+]
+
+center = ["file-name"]
+
+right = [
+  "diagnostics",
+  "version-control",
+  "file-encoding",
+  "file-type",
+  "position-percentage",
+]
 
 [editor.cursor-shape]
 normal = "block"
@@ -24,6 +58,20 @@ display-inlay-hints = true
 
 [editor.indent-guides]
 render = true
+
+[editor.auto-save]
+# autosave file 5s since last edit
+# doesn't work in insert mode
+after-delay.enable = true
+after-delay.timeout = 5000
+
+[editor.whitespace.render]
+# all or none
+space = "none"
+tab = "none"
+nbsp = "none"
+nnbsp = "none"
+newline = "none"
 
 [editor.inline-diagnostics]
 cursor-line = "warning"  # show warnings and errors on the cursorline inline

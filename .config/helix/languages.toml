@@ -2,7 +2,7 @@
 name = "bash"
 auto-format = true
 # 2 space indent, indent cases in switch
-formatter = { command = "shfmt", arguments = ["-i", "2", "-ci"] }
+formatter = { command = "shfmt", args = ["-i", "2", "-ci"] }
 language-servers = ["bash-language-server"]
 
 [[language]]
@@ -45,8 +45,15 @@ name = "markdown"
 formatter = { command = "prettier", args = ["--parser", "markdown"] }
 language-servers = ["marksman"]
 
+[language-server.yaml-language-server.config.yaml]
+format = { enable = true }
+validation = true
+
+[language-server.yaml-language-server.config.yaml.schemas]
+"https://json.schemastore.org/github-workflow.json" = ".github/workflows/*.{yml,yaml}"
+"https://raw.githubusercontent.com/ansible-community/schemas/main/f/ansible-tasks.json" = "roles/{tasks,handlers}/*.{yml,yaml}"
+
 [[language-server.typescript-language-server.config.plugins]]
 name = "@vue/typescript-plugin"
 location = "/full/path/to/node_modules/@vue/typescript-plugin"
 languages = ["vue"]
-

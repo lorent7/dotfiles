@@ -50,6 +50,8 @@ npm install -g tombi
 
 npm install -g typescript typescript-language-server
 
+npm i -g yaml-language-server@next
+
 # for eslint:
 # https://github.com/helix-editor/helix/wiki/Language-Server-Configurations#eslint
 npm i -g prettier
