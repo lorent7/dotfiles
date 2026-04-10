@@ -20,6 +20,7 @@ alias lg='lazygit'
 
 alias cat='bat'
 alias ts='tailscale'
+alias y='yazi'
 
 # cd
 alias ...='cd ../..'
