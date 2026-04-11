@@ -36,6 +36,8 @@ plugins=(
 	zsh-syntax-highlighting
 	aliases
 	docker-compose
+	colored-man-pages # TODO: adjust highlight colors
+	tmux
 )
 
 # Point completion dump to cache
@@ -52,3 +54,13 @@ source $ZSH/oh-my-zsh.sh
 [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
 
 eval "$(zoxide init zsh)"
+
+# Allow Ctrl-z to toggle between suspend and resume
+function Resume {
+  fg
+  zle push-input
+  BUFFER=""
+  zle accept-line
+}
+zle -N Resume
+bindkey "^Z" Resume
