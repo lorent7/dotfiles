@@ -13,6 +13,8 @@ alias dfa='dotfiles add'
 alias dfP='dotfiles push'
 alias dfp='dotfiles pull'
 
+alias cm='chezmoi'
+
 # alias to use lazygit with dotfiles
 alias lgdf='lazygit --git-dir=$HOME/dotfiles --work-tree=$HOME'
 
