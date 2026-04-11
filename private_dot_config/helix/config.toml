@@ -116,6 +116,13 @@ S-tab = "goto_previous_buffer"
 
 C-d = '@X"dy"dp'
 
+C-r = [
+  ":write-all",
+  ":insert-output scooter --no-stdin >/dev/tty",
+  ":redraw",
+  ":reload-all"
+]
+
 # movement
 C-end = "goto_file_end"
 C-home = "goto_file_start"

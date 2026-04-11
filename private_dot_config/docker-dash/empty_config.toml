@@ -1,0 +1,4 @@
+[refresh]
+# Auto-refresh interval
+# Examples: "500ms", "5s", "1m", "2m30s"
+interval = "5s"

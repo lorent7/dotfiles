@@ -41,9 +41,9 @@ plugins=(
 )
 
 # Point completion dump to cache
-ZSH_COMPDUMP="$XDG_CACHE_HOME/zsh/zcompdump-${HOST}-${ZSH_VERSION}"
+ZCOMPDUMP="${XDG_CACHE_HOME}/zsh/zcompdump-${HOST}-${ZSH_VERSION}"
 
-source $ZSH/oh-my-zsh.sh
+source "$ZSH"/oh-my-zsh.sh
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
