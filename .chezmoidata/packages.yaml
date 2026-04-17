@@ -41,8 +41,6 @@ packages:
     - shfmt
     - tmux
     - wget
-    - xdg-ninja
-    - yay
     - zoxide
     - zsh
 
