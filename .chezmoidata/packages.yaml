@@ -1,8 +1,8 @@
 packages:
   npm:
     - bash-language-server
-    - compose-language-service
     - dockerfile-language-server-nodejs
+    - "@microsoft/compose-language-service"
     - prettier
     - tombi
     - typescript
