@@ -2,7 +2,7 @@
 #!/bin/bash
 
 sudo pacman -Syu --needed --noconfirm
-sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}{{ . | quote }} {{ end -}}
+sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}{{ . | quote }} {{ end }}
 
 if ! command -v yay &>/dev/null; then
   _tempdir=$(mktemp -d)
@@ -18,7 +18,7 @@ yay -S --needed --noconfirm {{ range .packages.aur }}{{ . | quote }} {{ end }}
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
   source /usr/share/nvm/init-nvm.sh
   nvm install --lts --latest-npm
-  npm install -g {{ range .packages.npm -}}{{ . | quote }} {{ end -}}
+  npm install -g {{ range .packages.npm -}}{{ . | quote }} {{ end }}
 fi
 
 {{ end -}}
