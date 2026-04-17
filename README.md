@@ -8,7 +8,11 @@ Inspired by [Lissy93](https://github.com/Lissy93/dotfiles)
 
 ## Usage
 
-Will get auto install script in future.
+This script sets up all the dotfiles.
+
+```bash
+sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+```
 
 ## Dependencies
 

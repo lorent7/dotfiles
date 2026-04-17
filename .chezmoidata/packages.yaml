@@ -1,0 +1,51 @@
+packages:
+  npm:
+    - bash-language-server
+    - compose-language-service
+    - dockerfile-language-server-nodejs
+    - prettier
+    - tombi
+    - typescript
+    - typescript-language-server
+    - vscode-langservers-extracted
+    - yaml-language-server
+
+  pacman:
+    - base-devel
+    - bat
+    - bluez
+    - btop
+    - clang
+    - cockpit
+    - cockpit-files
+    - cockpit-packagekit
+    - curl
+    - docker
+    - ethtool
+    - fastfetch
+    - fd
+    - fzf
+    - gdp
+    - git
+    - glow
+    - helix
+    - htop
+    - lazygit
+    - marksman
+    - nvmpacman-contrib
+    - nvmz
+    - openssh
+    - ripgrep
+    - samba
+    - shellcheck
+    - shfmt
+    - tmux
+    - wget
+    - xdg-ninja
+    - yay
+    - zoxide
+    - zsh
+
+  aur:
+    - scooter
+    - xdg-ninja
