@@ -25,7 +25,7 @@ packages:
     - fastfetch
     - fd
     - fzf
-    - gdp
+    - gdb
     - git
     - glow
     - helix
