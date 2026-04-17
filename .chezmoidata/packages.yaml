@@ -32,8 +32,8 @@ packages:
     - htop
     - lazygit
     - marksman
-    - nvmpacman-contrib
-    - nvmz
+      pacman-contrib
+    - nvm
     - openssh
     - ripgrep
     - samba
@@ -47,5 +47,5 @@ packages:
     - zsh
 
   aur:
-    - scooter
+    # - scooter
     - xdg-ninja
