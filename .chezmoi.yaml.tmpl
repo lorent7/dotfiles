@@ -1,2 +1,5 @@
 git:
   autoCommit: true
+
+data:
+  ephemeral: {{ promptBoolOnce . "ephemeral" "Ephemeral system (skip AUR?)?" false }}

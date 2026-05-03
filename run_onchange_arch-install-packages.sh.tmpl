@@ -4,6 +4,7 @@
 sudo pacman -Syu --needed --noconfirm
 sudo pacman -S --needed --noconfirm {{ range .packages.pacman -}}{{ . | quote }} {{ end }}
 
+{{ if not .ephemeral -}}
 if ! command -v yay &>/dev/null; then
   _tempdir=$(mktemp -d)
   git clone https://aur.archlinux.org/yay.git $_tempdir
@@ -14,6 +15,7 @@ if ! command -v yay &>/dev/null; then
 fi
 
 yay -S --needed --noconfirm {{ range .packages.aur }}{{ . | quote }} {{ end }}
+{{ end -}}
 
 if [ -f /usr/share/nvm/init-nvm.sh ]; then
   source /usr/share/nvm/init-nvm.sh
