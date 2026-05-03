@@ -8,10 +8,16 @@ Inspired by [Lissy93](https://github.com/Lissy93/dotfiles)
 
 ## Usage
 
-This script sets up all the dotfiles.
+There's one prompt that asks if its an ephemeral system so it can skip AUR install.\
+It can be setup with following commands:
 
 ```bash
-sh -c "$(curl -fsLS get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+# normal install with prompts
+sh -c "$(curl -fsLS https://get.chezmoi.io)" -- init --apply $GITHUB_USERNAME
+
+# install and then remove all traces of chezmoi
+sh -c "$(curl -fsLS https://get.chezmoi.io)" -- init --one-shot $GITHUB_USERNAME
+
 ```
 
 ## Dependencies
