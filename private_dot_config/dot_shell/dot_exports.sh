@@ -54,6 +54,6 @@ if [ -n "$ZSH_VERSION" ]; then
   export ZSH_CACHE_DIR="$XDG_CACHE_HOME/zsh"
   mkdir -p "$ZSH_CACHE_DIR"
 
-  SAVEHIST=5000 # max saved cmds in ram
-  HISTSIZE=5000 # max saved cmds in history file
+  SAVEHIST=50000 # max saved cmds in ram
+  HISTSIZE=50000 # max saved cmds in history file
 fi
