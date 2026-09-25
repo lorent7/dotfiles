@@ -13,6 +13,8 @@ alias dfa='dotfiles add'
 alias dfP='dotfiles push'
 alias dfp='dotfiles pull'
 
+alias reset='reset && printf "\e[0 q"'
+
 alias cm='chezmoi'
 
 # alias to use lazygit with dotfiles
