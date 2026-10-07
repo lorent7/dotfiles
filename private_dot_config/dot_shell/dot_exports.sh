@@ -36,6 +36,7 @@ export INPUTRC="$XDG_CONFIG_HOME"/readline/inputrc
 # for PATH
 export PATH=$PATH:$XDG_BIN_HOME
 export PATH=$PATH:"$GOPATH"/bin
+export PATH=$PATH:"$CARGO_HOME"/bin
 
 # https://docs.npmjs.com/cli/v11/using-npm/config
 export NPM_CONFIG_USERCONFIG="$XDG_CONFIG_HOME/npm/npmrc"
