@@ -11,7 +11,6 @@ scrolloff = 8
 idle-timeout = 0
 bufferline = "multiple"
 popup-border = "all"
-set-softwrap = true
 
 [editor.gutters]
 layout = [
@@ -79,6 +78,9 @@ cursor-line = "warning"  # show warnings and errors on the cursorline inline
 
 [editor.smart-tab]
 supersede-menu = true
+
+[softwrap]
+enable = true
 
 [keys.insert]
 # move lines with alt up/down
