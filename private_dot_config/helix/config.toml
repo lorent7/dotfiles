@@ -76,11 +76,11 @@ newline = "none"
 [editor.inline-diagnostics]
 cursor-line = "warning"  # show warnings and errors on the cursorline inline
 
+[editor.soft-wrap]
+enable = true
+
 [editor.smart-tab]
 supersede-menu = true
-
-[softwrap]
-enable = true
 
 [keys.insert]
 # move lines with alt up/down
