@@ -20,3 +20,6 @@ cmd dotfiles_add %{{
   done
 }}
 map dA dotfiles_add
+
+# show docker config for a compose
+map dc %docker compose -f "$f" config
